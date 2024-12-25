@@ -46,7 +46,8 @@ def download_single_video(info, folder_path, resolution='1080p'):
         'writeinfojson': True,
         'writethumbnail': True,
         'outtmpl': os.path.join(folder_path, sanitized_uploader, f'{upload_date} {sanitized_title}', 'download'),
-        'ignoreerrors': True
+        'ignoreerrors': True, 
+        'cookiesfrombrowser': ('chrome',)
     }
 
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
