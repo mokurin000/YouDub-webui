@@ -40,8 +40,8 @@ def tts(text, output_path, speaker_wav, model_name="tts_models/multilingual/mult
         try:
             wav = model.tts(text, speaker_wav=speaker_wav, language=language)
             wav = np.array(wav)
+            logger.info(f'TTS {text} 完成')
             save_wav(wav, output_path)
-            logger.info(f'TTS {text}')
             break
         except Exception as e:
             logger.warning(f'TTS {text} 失败')
@@ -49,7 +49,7 @@ def tts(text, output_path, speaker_wav, model_name="tts_models/multilingual/mult
 
 
 if __name__ == '__main__':
-    speaker_wav = r'videos\TED-Ed\20231121 Why did the US try to kill all the bison？ - Andrew C. Isenberg\audio_vocals.wav'
+    speaker_wav = 'videos/GOTO Conferences/20230711 Pijul Version-Control Post-Git Pierre-Étienne Meunier GOTO 2023/audio_vocals.wav'
     while True:
         text = input('请输入：')
         tts(text, f'playground/{text}.wav', speaker_wav)

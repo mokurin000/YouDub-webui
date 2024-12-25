@@ -35,6 +35,7 @@
 ## 安装
 
 ```bash
+# 多讲话人场景需要
 pixi run python -m pip install TTS
 pixi run python -m pip install -e .
 ```
