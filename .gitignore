@@ -171,3 +171,4 @@ remove_mp4.py
 # pixi environments
 *.egg-info
 .pixi
+.gradio

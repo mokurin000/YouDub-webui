@@ -9,7 +9,6 @@ version = "0.1.0"
 [tasks]
 
 [dependencies]
-gradio = ">=5.9.1,<6"
 loguru = ">=0.7.2,<0.8"
 yt-dlp = ">=2024.8.6,<2025"
 scipy = ">=1.14.1,<2"
@@ -27,3 +26,5 @@ bilibili-toolman = ">=1.0.7.9, <2"
 audiostretchy = ">=1.3.5, <2"
 whisperx = { git = "https://github.com/mokurin000/whisperx.git" }
 demucs = { git = "https://github.com/mokurin000/demucs.git" }
+gradio = "*"
+python-dotenv = ">=1.0.1, <2"
