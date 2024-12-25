@@ -38,10 +38,9 @@ def ensure_transcript_length(transcript, max_length=4000):
     return before[:length] + after[-length:]
 def summarize(info, transcript, target_language='简体中文'):
     client = OpenAI(
-    # This is the default and can be omitted
-    base_url=os.getenv('OPENAI_API_BASE', 'https://api.openai.com/v1'),
-    api_key=os.getenv('OPENAI_API_KEY')
-)
+        base_url=os.getenv('OPENAI_API_BASE', 'https://api.openai.com/v1'),
+        api_key=os.getenv('OPENAI_API_KEY')
+    )
     transcript = ' '.join(line['text'] for line in transcript)
     transcript = ensure_transcript_length(transcript, max_length=2000)
     info_message = f'Title: "{info["title"]}" Author: "{info["uploader"]}". ' 
@@ -354,4 +353,4 @@ def translate_all_transcript_under_folder(folder, target_language):
 
 if __name__ == '__main__':
     translate_all_transcript_under_folder(
-        r'videos\TED-Ed\20240227 Can you solve the magical maze riddle - Alex Rosenthal', '简体中文')
+        'videos', '简体中文')
