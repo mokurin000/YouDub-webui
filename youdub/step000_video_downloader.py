@@ -65,7 +65,7 @@ def get_info_list_from_url(url, num_videos):
 
     # Download JSON information first
     ydl_opts = {
-        'format': 'best',
+        'format': 'bestaudio+bestvideo',
         'dumpjson': True,
         'playlistend': num_videos,
         'ignoreerrors': True
@@ -117,6 +117,6 @@ def download_from_url(url, folder_path, resolution='1080p', num_videos=5):
 
 if __name__ == '__main__':
     # Example usage
-    url = 'https://www.youtube.com/watch?v=3LPJfIKxwWc'
+    url = 'https://www.youtube.com/watch?v=7MpdZkGj5AI'
     folder_path = 'videos'
     download_from_url(url, folder_path)

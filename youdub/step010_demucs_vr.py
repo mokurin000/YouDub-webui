@@ -3,7 +3,7 @@ from demucs.api import Separator
 import os
 from loguru import logger
 import time
-from .utils import save_wav, normalize_wav
+from utils import save_wav, normalize_wav
 import torch
 auto_device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 separator = None
@@ -49,16 +49,22 @@ def separate_audio(folder: str, model_name: str = "htdemucs_ft", device: str = '
     t_start = time.time()
     try:
         origin, separated = separator.separate_audio_file(audio_path)
-    except:
+    except Exception as e:
         # reload_model(model_name, device, progress, shifts)
                 # origin, separated = separator.separate_audio_file(audio_path)
         time.sleep(5)
-        logger.error(f'Error separating audio from {folder}')
+        logger.error(f'Error separating: {e.__class__.__name__}: {e}')
         raise Exception(f'Error separating audio from {folder}')
     t_end = time.time()
     logger.info(f'Audio separated in {t_end - t_start:.2f} seconds')
     
+    vocal_output_path = os.path.join(folder, 'audio_vocals.wav')
+    instruments_output_path = os.path.join(folder, 'audio_instruments.wav')
+
     vocals = separated['vocals'].numpy().T
+    save_wav(vocals, vocal_output_path, sample_rate=44100)
+    logger.info(f'Vocals saved to {vocal_output_path}')
+
     instruments = None
     for k, v in separated.items():
         if k == 'vocals':
@@ -68,13 +74,6 @@ def separate_audio(folder: str, model_name: str = "htdemucs_ft", device: str = '
         else:
             instruments += v
     instruments = instruments.numpy().T
-    
-    vocal_output_path = os.path.join(folder, 'audio_vocals.wav')
-    instruments_output_path = os.path.join(folder, 'audio_instruments.wav')
-    
-    save_wav(vocals, vocal_output_path, sample_rate=44100)
-    logger.info(f'Vocals saved to {vocal_output_path}')
-    
     save_wav(instruments, instruments_output_path, sample_rate=44100)
     logger.info(f'Instruments saved to {instruments_output_path}')
     
