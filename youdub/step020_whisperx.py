@@ -153,6 +153,10 @@ def transcribe_all_audio_under_folder(folder, model_name: str = 'large', downloa
     return f'Transcribed all audio under {folder}'
 
 if __name__ == '__main__':
-    transcribe_all_audio_under_folder('videos')
+    transcribe_all_audio_under_folder(
+        'videos', 
+        # Adjusted batch_size for 6G VRAM
+        batch_size=4
+    )
     
     
