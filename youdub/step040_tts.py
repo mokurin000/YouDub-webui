@@ -6,9 +6,9 @@ import librosa
 from loguru import logger
 import numpy as np
 
-from .utils import save_wav, save_wav_norm
-from .step041_tts_bytedance import tts as bytedance_tts
-from .step042_tts_xtts import tts as xtts_tts
+from youdub.utils import save_wav, save_wav_norm
+from youdub.step041_tts_bytedance import tts as bytedance_tts
+from youdub.step042_tts_xtts import tts as xtts_tts
 from .cn_tx import TextNorm
 from audiostretchy.stretch import stretch_audio
 normalizer = TextNorm()

@@ -2,17 +2,16 @@ import json
 import os
 import time
 from loguru import logger
-from .step000_video_downloader import get_info_list_from_url, download_single_video, get_target_folder
-from .step010_demucs_vr import separate_all_audio_under_folder, init_demucs
-from .step020_whisperx import transcribe_all_audio_under_folder, init_whisperx
-from .step030_translation import translate_all_transcript_under_folder
-from .step040_tts import generate_all_wavs_under_folder
-from .step042_tts_xtts import init_TTS
-from .step050_synthesize_video import synthesize_all_video_under_folder
-from .step060_genrate_info import generate_all_info_under_folder
-from .step070_upload_bilibili import upload_all_videos_under_folder
+from youdub.step000_video_downloader import get_info_list_from_url, download_single_video, get_target_folder
+from youdub.step010_demucs_vr import separate_all_audio_under_folder, init_demucs
+from youdub.step020_whisperx import transcribe_all_audio_under_folder, init_whisperx
+from youdub.step030_translation import translate_all_transcript_under_folder
+from youdub.step040_tts import generate_all_wavs_under_folder
+from youdub.step042_tts_xtts import init_TTS
+from youdub.step050_synthesize_video import synthesize_all_video_under_folder
+from youdub.step060_genrate_info import generate_all_info_under_folder
+from youdub.step070_upload_bilibili import upload_all_videos_under_folder
 from concurrent.futures import ThreadPoolExecutor, as_completed
-import re
 
 
 

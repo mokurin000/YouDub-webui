@@ -8,7 +8,7 @@ from loguru import logger
 import torch
 from dotenv import load_dotenv
 
-from .utils import save_wav
+from youdub.utils import save_wav
 load_dotenv()
 
 whisper_model = None

@@ -36,6 +36,7 @@
 
 ```bash
 pixi run python -m pip install TTS
+pixi run python -m pip install -e .
 ```
 
 ## 简介

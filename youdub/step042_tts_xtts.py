@@ -1,10 +1,12 @@
 import os
+import numpy as np
+import time
+
+import torch
 from TTS.api import TTS
 from loguru import logger
-import numpy as np
-import torch
-import time
-from .utils import save_wav
+
+from youdub.utils import save_wav
 model = None
 
 def init_TTS():
