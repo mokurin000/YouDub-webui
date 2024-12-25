@@ -172,3 +172,5 @@ remove_mp4.py
 *.egg-info
 .pixi
 .gradio
+
+/cookies.txt

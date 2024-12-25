@@ -41,13 +41,13 @@ def download_single_video(info, folder_path, resolution='1080p'):
     
     resolution = resolution.replace('p', '')
     ydl_opts = {
-        # 'res': '1080',
-        'format': f'bestvideo[ext=mp4][height<={resolution}]+bestaudio[ext=m4a]/best[ext=mp4]/best',
+        # hard-code to best format
+        'format': 'bestvideo+bestaudio',
         'writeinfojson': True,
         'writethumbnail': True,
         'outtmpl': os.path.join(folder_path, sanitized_uploader, f'{upload_date} {sanitized_title}', 'download'),
         'ignoreerrors': True, 
-        'cookiesfrombrowser': ('chrome',)
+        # 'cookiefile': "cookies.txt"
     }
 
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
@@ -94,7 +94,7 @@ def download_from_url(url, folder_path, resolution='1080p', num_videos=5):
 
     # Download JSON information first
     ydl_opts = {
-        'format': 'best',
+        'format': 'bestaudio+bestvideo',
         'dumpjson': True,
         'playlistend': num_videos,
         'ignoreerrors': True
