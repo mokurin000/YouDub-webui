@@ -104,7 +104,8 @@ git clone https://github.com/liuzhao1225/YouDub-webui.git
   - `HF_TOKEN`: Hugging Face token，用于 speaker diarization 功能。
   - `HF_ENDPOINT`: 如果从 `huggingface` 下载模型时出错，可以添加此环境变量。
   - `APPID` 和 `ACCESS_TOKEN`: 火山引擎 TTS 所需的凭据。
-  - `BILI_BASE64`: Bilibili API 所需的凭据。获取方法请参考 [bilibili-toolman 准备凭据](https://github.com/mos9527/bilibili-toolman?tab=readme-ov-file#%E5%87%86%E5%A4%87%E5%87%AD%E6%8D%AE)。
+  - `BILI_SESSDATA`: Bilibili API 所需的凭据。
+  - `BILI_BILI_JCT`: Bilibili API 所需的凭据。
 
 ### 4. 运行程序
 选择以下任一方式运行程序：
