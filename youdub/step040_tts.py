@@ -38,7 +38,7 @@ def adjust_audio_length(
         min(desired_length / current_length, max_speed_factor), min_speed_factor
     )
     desired_length = current_length * speed_factor
-    target_path = wav_path.replace(".wav", f"_adjusted.wav")
+    target_path = wav_path.replace(".wav", "_adjusted.wav")
     stretch_audio(wav_path, target_path, ratio=speed_factor, sample_rate=sample_rate)
     wav, sample_rate = librosa.load(target_path, sr=sample_rate)
     return wav[: int(desired_length * sample_rate)], desired_length

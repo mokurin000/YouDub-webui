@@ -8,7 +8,6 @@ from youdub.step050_synthesize_video import synthesize_all_video_under_folder
 from youdub.step060_genrate_info import generate_all_info_under_folder
 from youdub.step070_upload_bilibili import upload_all_videos_under_folder
 from youdub.do_everything import do_everything
-import os
 
 
 do_everything_interface = gr.Interface(
