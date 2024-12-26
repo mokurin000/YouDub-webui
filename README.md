@@ -40,6 +40,12 @@ pixi run python -m pip install TTS
 pixi run python -m pip install -e .
 ```
 
+您的 huggingface token 需要申请访问：
+
+- [embedding](https://huggingface.co/pyannote/embedding)
+- [segmentation-3.0](https://huggingface.co/pyannote/segmentation-3.0)
+- [speaker-diarization-3.1](https://huggingface.co/pyannote/speaker-diarization-3.1)
+
 ## 简介
 `YouDub-webui` 是 [`YouDub`](https://github.com/liuzhao1225/YouDub) 项目的网页交互版本，基于 `Gradio` 构建，为用户提供简易操作界面来访问和使用 [`YouDub`](https://github.com/liuzhao1225/YouDub) 的强大功能。[`YouDub`](https://github.com/liuzhao1225/YouDub) 是一个开创性的开源工具，旨在将 YouTube 和其他平台上的高质量视频翻译和配音成中文版本。该工具结合了最新的 AI 技术，包括语音识别、大型语言模型翻译，以及 AI 声音克隆技术，提供与原视频相似的中文配音，为中文用户提供卓越的观看体验。
 
