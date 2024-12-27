@@ -69,6 +69,7 @@ def generate_wavs(folder, force_bytedance=False):
         if bytedance_ready() and (num_speakers == 1 or force_bytedance):
             bytedance_tts(text, output_path, speaker_wav, voice_type=voice_type)
         else:
+            logger.info("failing back to XTTS")
             xtts_tts(text, output_path, speaker_wav)
         logger.info(f"TTS processed: {output_path}")
 

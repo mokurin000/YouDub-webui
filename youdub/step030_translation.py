@@ -187,11 +187,6 @@ def valid_translation(text, translation):
                 False,
                 "Only translate the following sentence and give me the result.",
             )
-    elif len(translation) > len(text) * 0.75:
-        return (
-            False,
-            "The translation is too long. Only translate the following sentence and give me the result.",
-        )
 
     forbidden = [
         "翻译",
