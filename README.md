@@ -47,6 +47,8 @@
 pixi run python -m pip install TTS
 ```
 
+注意：虽然接入火山tts的情况，TTS依赖并非必要，但是这一步隐式的安装了 `numpy<2` ，使得一些不兼容 Numpy 2.x 的依赖正确工作。
+
 ## 配置
 
 ```bash
