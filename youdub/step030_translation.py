@@ -143,16 +143,18 @@ def summarize(info, transcript, target_language="简体中文"):
 
 def translation_postprocess(result):
     result = re.sub(r"\（[^)]*\）", "", result)
-    result = result.replace("...", "，")
     result = re.sub(r"(?<=\d),(?=\d)", "", result)
-    result = (
-        result.replace("²", "的平方")
-        .replace("————", "：")
-        .replace("——", "：")
-        .replace("°", "度")
-    )
-    result = result.replace("AI", "人工智能")
-    result = result.replace("变压器", "Transformer")
+    rules = {
+        "...": "，",
+        "²": "的平方",
+        "————": "：",
+        "——": "：",
+        "°": "度",
+        "AI": "人工智能",
+        "变压器": "Transformer",
+    }
+    for origin, target in rules.items():
+        result = result.replace(origin, target)
     return result
 
 
