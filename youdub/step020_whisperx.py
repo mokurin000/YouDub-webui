@@ -12,6 +12,8 @@ from youdub.utils import save_wav
 
 load_dotenv()
 
+COMPUTE_TYPE = os.environ.get("COMPUTE_TYPE", "float16")
+
 whisper_model = None
 diarize_model = None
 
@@ -39,7 +41,11 @@ def load_whisper_model(
     logger.info(f"Loading WhisperX model: {model_name}")
     t_start = time.time()
     whisper_model = whisperx.load_model(
-        model_name, download_root=download_root, device=device
+        model_name,
+        download_root=download_root,
+        device=device,
+        # some device doesn't support float16
+        compute_type=COMPUTE_TYPE,
     )
     t_end = time.time()
     logger.info(f"Loaded WhisperX model: {model_name} in {t_end - t_start:.2f}s")

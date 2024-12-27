@@ -55,7 +55,9 @@ cp .env.example .env
 
 按需修改 .env，其中火山的令牌、bilibili的cookies是不必要的。
 
-前者未设置的情况会自动 fallback 到开源的 XTTSv2
+前者未设置的情况会自动 fallback 到开源的 XTTSv2。
+
+如果您的GPU过于老旧，可能需要设置 `COMPUTE_TYPE=int8` 来避免使用硬件不支持的 fp16 精度。
 
 ## 启动
 
