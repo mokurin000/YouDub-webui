@@ -7,6 +7,11 @@ from dotenv import load_dotenv
 import time
 from loguru import logger
 
+opai_client = OpenAI(
+    base_url=os.getenv("OPENAI_API_BASE", "https://api.openai.com/v1"),
+    api_key=os.getenv("OPENAI_API_KEY"),
+)
+
 load_dotenv()
 
 model_name = os.getenv("MODEL_NAME", "gpt-3.5-turbo")
@@ -38,10 +43,6 @@ def ensure_transcript_length(transcript, max_length=4000):
 
 
 def summarize(info, transcript, target_language="简体中文"):
-    client = OpenAI(
-        base_url=os.getenv("OPENAI_API_BASE", "https://api.openai.com/v1"),
-        api_key=os.getenv("OPENAI_API_KEY"),
-    )
     transcript = " ".join(line["text"] for line in transcript)
     transcript = ensure_transcript_length(transcript, max_length=2000)
     info_message = f'Title: "{info["title"]}" Author: "{info["uploader"]}". '
@@ -67,7 +68,7 @@ def summarize(info, transcript, target_language="简体中文"):
                 },
                 {"role": "user", "content": full_description + retry_message},
             ]
-            response = client.chat.completions.create(
+            response = opai_client.chat.completions.create(
                 model=model_name, messages=messages, timeout=240, extra_body=extra_body
             )
             summary = response.choices[0].message.content.replace("\n", "")
@@ -106,7 +107,7 @@ def summarize(info, transcript, target_language="简体中文"):
     ]
     while True:
         try:
-            response = client.chat.completions.create(
+            response = opai_client.chat.completions.create(
                 model=model_name, messages=messages, timeout=240, extra_body=extra_body
             )
             summary = response.choices[0].message.content.replace("\n", "")
