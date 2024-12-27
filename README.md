@@ -36,6 +36,12 @@
 
 ## 一键安装依赖
 
+安装TTS前您需要：
+
+- [C++ BuildTools](https://visualstudio.microsoft.com/visual-cpp-build-tools/)
+  - Windows SDK
+  - MSVC
+
 ```bash
 # 多讲话人场景需要
 pixi run python -m pip install TTS
