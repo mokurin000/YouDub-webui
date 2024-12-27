@@ -212,44 +212,6 @@ def valid_translation(text, translation):
     return True, translation_postprocess(translation)
 
 
-# def split_sentences(translation, punctuations=['。', '？', '！', '\n', '”', '"']):
-#     def is_punctuation(char):
-#         return char in punctuations
-
-#     output_data = []
-#     for item in translation:
-#         start = item['start']
-#         text = item['text']
-#         speaker = item['speaker']
-#         translation = item['translation']
-#         sentence_start = 0
-#         duration_per_char = (item['end'] - item['start']) / len(translation)
-#         for i, char in enumerate(translation):
-#             # If the character is a punctuation, split the sentence
-#             if not is_punctuation(char) and i != len(translation) - 1:
-#                 continue
-#             if i - sentence_start < 5 and i != len(translation) - 1:
-#                 continue
-#             if i < len(translation) - 1 and is_punctuation(translation[i+1]):
-#                 continue
-#             sentence = translation[sentence_start:i+1]
-#             sentence_end = start + duration_per_char * len(sentence)
-
-#             # Append the new item
-#             output_data.append({
-#                 "start": round(start, 3),
-#                 "end": round(sentence_end, 3),
-#                 "text": text,
-#                 "speaker": speaker,
-#                 "translation": sentence
-#             })
-
-#             # Update the start for the next sentence
-#             start = sentence_end
-#             sentence_start = i + 1
-#     return output_data
-
-
 def split_text_into_sentences(para):
     para = re.sub("([。！？\?])([^，。！？\?”’》])", r"\1\n\2", para)  # 单字符断句符
     para = re.sub("(\.{6})([^，。！？\?”’》])", r"\1\n\2", para)  # 英文省略号
@@ -328,7 +290,12 @@ def _translate(summary, transcript, target_language="简体中文"):
             messages = (
                 fixed_message
                 + history[-30:]
-                + [{"role": "user", "content": f'使用地道的中文Translate:"{text}"'}]
+                + [
+                    {
+                        "role": "user",
+                        "content": f'使用地道的{target_language}Translate:"{text}"',
+                    }
+                ]
             )
 
             try:
