@@ -3,7 +3,9 @@
 ## 目录
 - [YouDub-webui: 优质视频中文化工具](#youdub-webui-优质视频中文化工具)
   - [目录](#目录)
-  - [安装](#安装)
+  - [一键安装依赖](#一键安装依赖)
+  - [配置](#配置)
+  - [启动](#启动)
   - [简介](#简介)
   - [主要特点](#主要特点)
   - [安装与使用指南](#安装与使用指南)
@@ -32,12 +34,27 @@
   - [许可协议](#许可协议)
   - [支持与联系方式](#支持与联系方式)
 
-## 安装
+## 一键安装依赖
 
 ```bash
 # 多讲话人场景需要
 pixi run python -m pip install TTS
-pixi run python -m pip install -e .
+```
+
+## 配置
+
+```bash
+cp .env.example .env
+```
+
+按需修改 .env，其中火山的令牌、bilibili的cookies是不必要的。
+
+前者未设置的情况会自动 fallback 到开源的 XTTSv2
+
+## 启动
+
+```bash
+pixi run python app.py
 ```
 
 您的 huggingface token 需要申请访问：
