@@ -7,12 +7,11 @@ from dotenv import load_dotenv
 import time
 from loguru import logger
 
+load_dotenv()
 opai_client = OpenAI(
     base_url=os.getenv("OPENAI_API_BASE", "https://api.openai.com/v1"),
     api_key=os.getenv("OPENAI_API_KEY"),
 )
-
-load_dotenv()
 
 model_name = os.getenv("MODEL_NAME", "gpt-3.5-turbo")
 print(f"using model {model_name}")
