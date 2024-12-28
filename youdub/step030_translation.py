@@ -8,6 +8,9 @@ import time
 from loguru import logger
 
 load_dotenv()
+
+TARGET_LANG_NAME = os.environ["TARGET_LANG_NAME"]
+
 opai_client = OpenAI(
     base_url=os.getenv("OPENAI_API_BASE", "https://api.openai.com/v1"),
     api_key=os.getenv("OPENAI_API_KEY"),
@@ -376,4 +379,4 @@ def translate_all_transcript_under_folder(folder, target_language):
 
 
 if __name__ == "__main__":
-    translate_all_transcript_under_folder("videos", "简体中文")
+    translate_all_transcript_under_folder("videos", target_language=TARGET_LANG_NAME)

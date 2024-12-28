@@ -3,15 +3,20 @@ import os
 import re
 import librosa
 
-from loguru import logger
 import numpy as np
+from dotenv import load_dotenv
+from loguru import logger
+from audiostretchy.stretch import stretch_audio
 
 from youdub.utils import save_wav, save_wav_norm
 from youdub.step041_tts_bytedance import tts as bytedance_tts
 from youdub.step041_tts_bytedance import is_ready as bytedance_ready
 from youdub.step042_tts_xtts import tts as xtts_tts
 from youdub.cn_tx import TextNorm
-from audiostretchy.stretch import stretch_audio
+
+load_dotenv()
+
+TARGET_LANG_CODE = os.environ["TARGET_LANG_CODE"]
 
 normalizer = TextNorm()
 
@@ -70,7 +75,7 @@ def generate_wavs(folder, force_bytedance=False):
             bytedance_tts(text, output_path, speaker_wav, voice_type=voice_type)
         else:
             logger.info("failing back to XTTS")
-            xtts_tts(text, output_path, speaker_wav)
+            xtts_tts(text, output_path, speaker_wav, language=TARGET_LANG_CODE)
         logger.info(f"TTS processed: {output_path}")
 
         start = line["start"]
@@ -128,5 +133,4 @@ def generate_all_wavs_under_folder(root_folder, force_bytedance=False):
 
 
 if __name__ == "__main__":
-    folder = "videos/GOTO Conferences/20230711 Pijul Version-Control Post-Git Pierre-Étienne Meunier GOTO 2023/"
-    generate_wavs(folder, force_bytedance=False)
+    generate_all_wavs_under_folder("videos", force_bytedance=False)
