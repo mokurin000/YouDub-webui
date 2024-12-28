@@ -205,6 +205,7 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/a7/06/3d6badcf13db419e25b07041d9c7b4a2c331d3f4e7134445ec5df57714cd/coloredlogs-15.0.1-py2.py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/e3/51/9b208e85196941db2f0654ad0357ca6388ab3ed67efdbfc799f35d1f83aa/colorlog-6.9.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/01/2c/93bb6741ee904b4c43e81b67e1b8b30f14de3c49ac3ac6cf97c54c6fcdcf/ctranslate2-4.4.0-cp311-cp311-win_amd64.whl
+      - pypi: https://files.pythonhosted.org/packages/61/8c/53a5937d102b6be60ace23565cc845e0c0f91f053c42584e495bb817a0c0/cutlet-0.4.0.tar.gz
       - pypi: git+https://github.com/mokurin000/demucs.git@e5dd6ad463c9e7916aeb9121d18537d00e2499d1
       - pypi: https://files.pythonhosted.org/packages/a2/55/8f8cab2afd404cf578136ef2cc5dfb50baa1761b68c9da1fb1e4eed343c9/docopt-0.6.2.tar.gz
       - pypi: https://files.pythonhosted.org/packages/d5/9d/9a13947db237375486c0690f4741dd2b7e1eee20e0ffcb55dbd1b21cc600/dora_search-0.1.12.tar.gz
@@ -216,12 +217,14 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/fb/b4/31c461eef98b96b8ab736d97274548eaf2b2e349bf09e4de3902f7d53084/flatbuffers-24.12.23-py2.py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/ca/8c/2ddffeb8b60a4bce3b196c32fcc30d8830d4615e7b492ec2071da801b8ad/frozenlist-1.5.0-cp311-cp311-win_amd64.whl
       - pypi: https://files.pythonhosted.org/packages/de/86/5486b0188d08aa643e127774a99bac51ffa6cf343e3deb0583956dca5b22/fsspec-2024.12.0-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/01/b5/4bc918de7727f9a3e75406053aca7a1afcffe81cdc83d789ad9414bea7ee/fugashi-1.4.0-cp311-cp311-win_amd64.whl
       - pypi: https://files.pythonhosted.org/packages/64/cb/9bfce732279c48f06c64582f9444422e08d9d48466467d15c2842e3aef44/gradio-5.9.1-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/69/ca/4d8ae560144a3e39b2a6d1848a5852c2822624506f9eccf90dabccd004bf/gradio_client-1.5.2-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/12/da/b9ed5e310bb8b89661b80cbcd4db5a067903bbcd7fc854923f5ebb4144f0/greenlet-3.1.1-cp311-cp311-win_amd64.whl
       - pypi: https://files.pythonhosted.org/packages/61/8c/fbdc0a88a622d9fa54e132d7bf3ee03ec602758658a2db5b339a65be2cfe/huggingface_hub-0.27.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/f0/0f/310fb31e39e2d734ccaa2c0fb981ee41f7bd5056ce9bc29b2248bd569169/humanfriendly-10.0-py2.py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/33/c9/751b6401887f4b50f9307cc1e53d287b3dc77c375c126aeb6335aff73ccb/HyperPyYAML-1.2.2-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/d2/e1/670cefc7f00b0e1890e114a37a98ea425f7e06131342aeb9636856ac663c/jaconv-0.4.0.tar.gz
       - pypi: https://files.pythonhosted.org/packages/a1/19/c9e1596b5572c786b93428d0904280e964c930fae7e6c9368ed9e1b63922/julius-0.2.7.tar.gz
       - pypi: https://files.pythonhosted.org/packages/c8/5c/2ae2f48d32b954a93827469714506a45f9499df235a4e1c5c87849eb6550/lameenc-1.7.0-cp311-cp311-win_amd64.whl
       - pypi: https://files.pythonhosted.org/packages/d4/54/2de887e964a561776ac49c5e715ca8a56138ea7e2b95325e0a79aa46a070/lightning-2.5.0.post0-py3-none-any.whl
@@ -229,6 +232,7 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/1e/bf/7a6a36ce2e4cafdfb202752be68850e22607fccd692847c45c1ae3c17ba6/Mako-1.3.8-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/42/d7/1ec15b46af6af88f19b8e5ffea08fa375d433c998b8a7639e76935c14f1f/markdown_it_py-3.0.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/b3/38/89ba8ad64ae25be8de66a6d463314cf1eb366222074cfda9ee839c56a4b4/mdurl-0.1.2-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/5d/1b/159b658b1bc9b2e6faf004e086dd81ce758a62cc5e8405065f7e30db0b8a/mojimoji-0.0.13-cp311-cp311-win_amd64.whl
       - pypi: https://files.pythonhosted.org/packages/9f/0b/ad879847ecbf6d27e90a6eabb7eff6b62c129eefe617ea45eae7c1f0aead/multidict-6.1.0-cp311-cp311-win_amd64.whl
       - pypi: https://files.pythonhosted.org/packages/4d/66/7d9e26593edda06e8cb531874633f7c2372279c3b0f46235539fe546df8b/nltk-3.9.1-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/e3/94/1843518e420fa3ed6919835845df698c7e27e183cb997394e4a670973a65/omegaconf-2.3.0-py3-none-any.whl
@@ -817,6 +821,15 @@ packages:
   purls: []
   size: 459984125
   timestamp: 1710308338091
+- pypi: https://files.pythonhosted.org/packages/61/8c/53a5937d102b6be60ace23565cc845e0c0f91f053c42584e495bb817a0c0/cutlet-0.4.0.tar.gz
+  name: cutlet
+  version: 0.4.0
+  sha256: 9abc50b2c36aabc0c863b7a0fd6a3a651dc372e056f0914d83e76ac2612f3626
+  requires_dist:
+  - jaconv
+  - fugashi
+  - mojimoji
+  requires_python: '>=3.5'
 - conda: https://conda.anaconda.org/conda-forge/noarch/cycler-0.12.1-pyhd8ed1ab_1.conda
   sha256: 9827efa891e507a91a8a2acf64e210d2aff394e1cde432ad08e1f8c66b12293c
   md5: 44600c4667a319d67dbe0681fc0bc833
@@ -1132,6 +1145,14 @@ packages:
   - zstandard ; extra == 'test-full'
   - tqdm ; extra == 'tqdm'
   requires_python: '>=3.8'
+- pypi: https://files.pythonhosted.org/packages/01/b5/4bc918de7727f9a3e75406053aca7a1afcffe81cdc83d789ad9414bea7ee/fugashi-1.4.0-cp311-cp311-win_amd64.whl
+  name: fugashi
+  version: 1.4.0
+  sha256: aeae8fc06d1c32c2ee1da79e30b8f25afd592853985e4776a3e4b78337e4b757
+  requires_dist:
+  - unidic ; extra == 'unidic'
+  - unidic-lite ; extra == 'unidic-lite'
+  requires_python: '>=3.8'
 - pypi: https://files.pythonhosted.org/packages/64/cb/9bfce732279c48f06c64582f9444422e08d9d48466467d15c2842e3aef44/gradio-5.9.1-py3-none-any.whl
   name: gradio
   version: 5.9.1
@@ -1424,6 +1445,10 @@ packages:
   purls: []
   size: 1908526
   timestamp: 1731327735346
+- pypi: https://files.pythonhosted.org/packages/d2/e1/670cefc7f00b0e1890e114a37a98ea425f7e06131342aeb9636856ac663c/jaconv-0.4.0.tar.gz
+  name: jaconv
+  version: 0.4.0
+  sha256: 32da74b247f276e09a52d6b35c153df2387965cb85a6f034cc8af21d446f8161
 - conda: https://conda.anaconda.org/conda-forge/noarch/jinja2-3.1.5-pyhd8ed1ab_0.conda
   sha256: 98977694b9ecaa3218662f843425f39501f81973c450f995eec68f1803ed71c3
   md5: 2752a6ed44105bfb18c9bef1177d9dcd
@@ -2463,6 +2488,11 @@ packages:
   purls: []
   size: 143887984
   timestamp: 1681894555912
+- pypi: https://files.pythonhosted.org/packages/5d/1b/159b658b1bc9b2e6faf004e086dd81ce758a62cc5e8405065f7e30db0b8a/mojimoji-0.0.13-cp311-cp311-win_amd64.whl
+  name: mojimoji
+  version: 0.0.13
+  sha256: ea2f75e93425f0bcfaef68c189845ec9a212d37a4997ffa35353ef7e5c57ca9a
+  requires_python: '>=3.7'
 - conda: https://conda.anaconda.org/conda-forge/win-64/mpg123-1.32.9-h01009b0_0.conda
   sha256: a1d7d25f2c448f5c47d1678cca1f6ae5deadb38e176ea0c76ea5c688589dfd7a
   md5: 1ed1580d4211223b285787eff05560f9

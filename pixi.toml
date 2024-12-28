@@ -27,6 +27,8 @@ bilibili-toolman = ">=1.0.7.9, <2"
 audiostretchy = ">=1.3.5, <2"
 gradio = ">=5.9.1,<6"
 python-dotenv = ">=1.0.1, <2"
+# for japanese XTTS
+cutlet = ">=0.4.0, <0.5"
 whisperx = { git = "https://github.com/mokurin000/whisperx.git" }
 demucs = { git = "https://github.com/mokurin000/demucs.git" }
 youdub = { path = ".", editable = true }
