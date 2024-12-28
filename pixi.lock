@@ -287,6 +287,7 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/35/c6/b6d8dd6d3216bf19f11cd3a93e34109fb55412f4b6752f05d22dbdbf8f2a/treetable-0.2.5.tar.gz
       - pypi: https://files.pythonhosted.org/packages/d0/cc/0a838ba5ca64dc832aa43f727bd586309846b0ffb2ce52422543e6075e8a/typer-0.15.1-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/a6/ab/7e5f53c3b9d14972843a647d8d7a853969a58aecc7559cb3267302c94774/tzdata-2024.2-py2.py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/55/2b/8cf7514cb57d028abcef625afa847d60ff1ffbf0049c36b78faa7c35046f/unidic-lite-1.0.8.tar.gz
       - pypi: https://files.pythonhosted.org/packages/61/14/33a3a1352cfa71812a3a21e8c9bfb83f60b0011f5e36f2b1399d51928209/uvicorn-0.34.0-py3-none-any.whl
       - pypi: git+https://github.com/mokurin000/whisperx.git@841318595bfac8dcb88af02e65398590f2ff0bba
       - pypi: https://files.pythonhosted.org/packages/ae/7b/8600250b3d89b625f1121d897062f629883c2f45339623b69b1747ec65fa/yarl-1.18.3-cp311-cp311-win_amd64.whl
@@ -4573,6 +4574,10 @@ packages:
   - pkg:pypi/unicodedata2?source=hash-mapping
   size: 365349
   timestamp: 1729705070270
+- pypi: https://files.pythonhosted.org/packages/55/2b/8cf7514cb57d028abcef625afa847d60ff1ffbf0049c36b78faa7c35046f/unidic-lite-1.0.8.tar.gz
+  name: unidic-lite
+  version: 1.0.8
+  sha256: db9d4572d9fdd4d00a97949d4b0741ec480ee05a7e7e2e32f547500dae27b245
 - conda: https://conda.anaconda.org/conda-forge/noarch/urllib3-2.3.0-pyhd8ed1ab_0.conda
   sha256: 114919ffa80c328127dab9c8e7a38f9d563c617691fb81fccb11c1e86763727e
   md5: 32674f8dbfb7b26410ed580dd3c10a29
