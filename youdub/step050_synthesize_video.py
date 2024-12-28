@@ -4,7 +4,12 @@ import os
 import subprocess
 import time
 
+from dotenv import load_dotenv
 from loguru import logger
+
+load_dotenv()
+
+RENDER_SUBTITLES = os.environ.get("SUBTITLES") == "1"
 
 
 def split_text(
@@ -188,4 +193,4 @@ def synthesize_all_video_under_folder(
 
 if __name__ == "__main__":
     folder = "videos"
-    synthesize_all_video_under_folder(folder, subtitles=True)
+    synthesize_all_video_under_folder(folder, subtitles=RENDER_SUBTITLES)
