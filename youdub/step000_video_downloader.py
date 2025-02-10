@@ -126,6 +126,6 @@ def download_from_url(url, folder_path, resolution="1080p", num_videos=5):
 
 if __name__ == "__main__":
     # Example usage
-    url = "https://www.youtube.com/watch?v=7MpdZkGj5AI"
+    url = "https://www.youtube.com/watch?v=gympGkzoclY"
     folder_path = "videos"
     download_from_url(url, folder_path)

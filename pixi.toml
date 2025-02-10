@@ -10,7 +10,7 @@ version = "0.1.0"
 
 [dependencies]
 loguru = ">=0.7.2,<0.8"
-yt-dlp = ">=2024.8.6,<2025"
+yt-dlp = ">=2025.1.26,<2026"
 scipy = ">=1.14.1,<2"
 openai = ">=1.59.0,<2"
 librosa = ">=0.10.2.post1,<0.11"
@@ -35,7 +35,7 @@ gradio = ">=5.9.1,<6"
 # for japanese XTTS
 # you must also install https://web.archive.org/web/20131108063325/https://mecab.googlecode.com/files/mecab-0.996.exe
 # to C:/mocab
-cutlet = ">=0.4.0, <0.5"
+cutlet = ">=0.5.0, <0.6"
 unidic-lite = ">=1.0.8, <2"
 
 # extract text from video
