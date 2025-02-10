@@ -211,7 +211,7 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/d5/9d/9a13947db237375486c0690f4741dd2b7e1eee20e0ffcb55dbd1b21cc600/dora_search-0.1.12.tar.gz
       - pypi: https://files.pythonhosted.org/packages/44/5a/f0b9ad6c0a9017e62d4735daaeb11ba3b6c009d69a26141b258cd37b5588/einops-0.8.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/52/b3/7e4df40e585df024fac2f80d1a2d579c854ac37109675db2b0cc22c0bb9e/fastapi-0.115.6-py3-none-any.whl
-      - pypi: https://files.pythonhosted.org/packages/07/a8/a5c6f24304010a67a54c5a90c99fbec07c31362ec89066b1a7d8ab310a00/faster_whisper-1.0.0-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/7b/03/ab118cb743dcf671da01ad0cfd7564465dda115db32976fdc95e21ce8feb/faster_whisper-1.1.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/53/5d/65f40bd333463b3230b3a72d93873caaf49b0cbb5228598fafb75fcc5357/ffmpy-0.5.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/6b/b6/82c7e601d6d3c3278c40b7bd35e17e82aa227f050aa9f66cb7b7fce29471/fire-0.7.0.tar.gz
       - pypi: https://files.pythonhosted.org/packages/fb/b4/31c461eef98b96b8ab736d97274548eaf2b2e349bf09e4de3902f7d53084/flatbuffers-24.12.23-py2.py3-none-any.whl
@@ -244,7 +244,7 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/74/c1/bb7e334135859c3a92ec399bc89293ea73f28e815e35b43929c8db6af030/primePy-1.3-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/cf/59/7cc7037b295d5772eceb426358bb1b86e6cab4616d971bd74275395d100d/propcache-0.2.1-cp311-cp311-win_amd64.whl
       - pypi: https://files.pythonhosted.org/packages/6c/38/2fcc968b377b531882d6ab2ac99b10ca6d00108394f6ff57c2395fb7baff/protobuf-5.29.2-cp310-abi3-win_amd64.whl
-      - pypi: https://files.pythonhosted.org/packages/f5/11/611c32f7b7894ba588ade502525d0130f3e731d15f925e9f2a1ae66c8680/pyannote.audio-3.1.1-py2.py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/17/e6/76049470d90217f9a15a34abf3e92d782cabc3fb4ab27515c9baaa5495d1/pyannote.audio-3.3.2-py2.py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/84/c4/370bc8ba66815a5832ece753a1009388bb07ea353d21c83f2d5a1a436f2c/pyannote.core-5.0.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/1e/c1/e538adc4027ead249320436564587c5c8393e39873985a2e4de52f44fccf/pyannote.database-5.1.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/6c/7d/035b370ab834b30e849fe9cd092b7bd7f321fcc4a2c56b84e96476b7ede5/pyannote.metrics-3.2.1-py3-none-any.whl
@@ -289,7 +289,7 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/a6/ab/7e5f53c3b9d14972843a647d8d7a853969a58aecc7559cb3267302c94774/tzdata-2024.2-py2.py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/55/2b/8cf7514cb57d028abcef625afa847d60ff1ffbf0049c36b78faa7c35046f/unidic-lite-1.0.8.tar.gz
       - pypi: https://files.pythonhosted.org/packages/61/14/33a3a1352cfa71812a3a21e8c9bfb83f60b0011f5e36f2b1399d51928209/uvicorn-0.34.0-py3-none-any.whl
-      - pypi: git+https://github.com/mokurin000/whisperx.git@841318595bfac8dcb88af02e65398590f2ff0bba
+      - pypi: git+https://github.com/m-bain/whisperx.git@44e8bf5bb658ad6e1a80585b987fae2d48b9662c
       - pypi: https://files.pythonhosted.org/packages/ae/7b/8600250b3d89b625f1121d897062f629883c2f45339623b69b1747ec65fa/yarl-1.18.3-cp311-cp311-win_amd64.whl
       - pypi: .
 packages:
@@ -961,16 +961,17 @@ packages:
   - pydantic-settings>=2.0.0 ; extra == 'all'
   - pydantic-extra-types>=2.0.0 ; extra == 'all'
   requires_python: '>=3.8'
-- pypi: https://files.pythonhosted.org/packages/07/a8/a5c6f24304010a67a54c5a90c99fbec07c31362ec89066b1a7d8ab310a00/faster_whisper-1.0.0-py3-none-any.whl
+- pypi: https://files.pythonhosted.org/packages/7b/03/ab118cb743dcf671da01ad0cfd7564465dda115db32976fdc95e21ce8feb/faster_whisper-1.1.0-py3-none-any.whl
   name: faster-whisper
-  version: 1.0.0
-  sha256: 96f6f957abb594fa393179b49b7ba0e3241195fc39e07b252574b057f61f8d74
+  version: 1.1.0
+  sha256: 0f2d025676bbff1e46c4108b6f9a82578d6e33826c174af2990e45b33fab6182
   requires_dist:
-  - av==11.*
   - ctranslate2>=4.0,<5
   - huggingface-hub>=0.13
-  - tokenizers>=0.13,<0.16
+  - tokenizers>=0.13,<1
   - onnxruntime>=1.14,<2
+  - av>=11
+  - tqdm
   - transformers[torch]>=4.23 ; extra == 'conversion'
   - black==23.* ; extra == 'dev'
   - flake8==6.* ; extra == 'dev'
@@ -3006,10 +3007,10 @@ packages:
   purls: []
   size: 265827
   timestamp: 1728400965968
-- pypi: https://files.pythonhosted.org/packages/f5/11/611c32f7b7894ba588ade502525d0130f3e731d15f925e9f2a1ae66c8680/pyannote.audio-3.1.1-py2.py3-none-any.whl
+- pypi: https://files.pythonhosted.org/packages/17/e6/76049470d90217f9a15a34abf3e92d782cabc3fb4ab27515c9baaa5495d1/pyannote.audio-3.3.2-py2.py3-none-any.whl
   name: pyannote-audio
-  version: 3.1.1
-  sha256: 52f86cba990c0afaffecd7ecb84aff79709a51923462ae8a44d6ac4d2010836a
+  version: 3.3.2
+  sha256: 599c694acd5d193215147ff82d0bf638bb191204ed502bd9fde8ff582e20aa1c
   requires_dist:
   - asteroid-filterbanks>=0.4
   - einops>=0.6.0
@@ -3024,22 +3025,24 @@ packages:
   - rich>=12.0.0
   - semver>=3.0.0
   - soundfile>=0.12.1
-  - speechbrain>=0.5.14
+  - speechbrain>=1.0.0
   - tensorboardx>=2.6
   - torch>=2.0.0
   - torch-audiomentations>=0.11.0
-  - torchaudio>=2.0.0
+  - torchaudio>=2.2.0
   - torchmetrics>=0.11.0
   - hydra-core>=1.1,<1.2 ; extra == 'cli'
   - typer>=0.4.0,<0.5.0 ; extra == 'cli'
   - pre-commit>=2.7 ; extra == 'dev'
   - recommonmark>=0.6 ; extra == 'dev'
   - black>=22.3.0 ; extra == 'dev'
+  - transformers>=4.39.1 ; extra == 'separation'
+  - asteroid>=0.7.0 ; extra == 'separation'
   - pytest>=6.0 ; extra == 'testing'
   - pytest-cov>=2.10 ; extra == 'testing'
   - jupyter ; extra == 'testing'
   - papermill ; extra == 'testing'
-  requires_python: '>=3.7'
+  requires_python: '>=3.9'
 - pypi: https://files.pythonhosted.org/packages/84/c4/370bc8ba66815a5832ece753a1009388bb07ea353d21c83f2d5a1a436f2c/pyannote.core-5.0.0-py3-none-any.whl
   name: pyannote-core
   version: 5.0.0
@@ -4669,21 +4672,21 @@ packages:
   - pkg:pypi/wheel?source=hash-mapping
   size: 62931
   timestamp: 1733130309598
-- pypi: git+https://github.com/mokurin000/whisperx.git@841318595bfac8dcb88af02e65398590f2ff0bba
+- pypi: git+https://github.com/m-bain/whisperx.git@44e8bf5bb658ad6e1a80585b987fae2d48b9662c
   name: whisperx
-  version: 3.2.0
+  version: 3.3.1
   requires_dist:
   - torch>=2
   - torchaudio>=2
-  - faster-whisper==1.0.0
-  - ctranslate2==4.4.0
+  - faster-whisper==1.1.0
+  - ctranslate2<4.5.0
   - transformers
-  - pandas<3
+  - pandas
   - setuptools>=65
   - nltk
-  - pyannote-audio==3.1.1
+  - pyannote-audio==3.3.2
   - pytest ; extra == 'dev'
-  requires_python: '>=3.8'
+  requires_python: '>=3.9,<3.13'
 - conda: https://conda.anaconda.org/conda-forge/noarch/win32_setctime-1.2.0-pyhd8ed1ab_0.conda
   sha256: d7b3128166949d462133d7a86fd8a8d80224dd2ce49cfbdcde9e4b3f8b67bbf2
   md5: e79f83003ee3dba79bf795fcd1bfcc89

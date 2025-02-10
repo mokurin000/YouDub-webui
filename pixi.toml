@@ -39,7 +39,7 @@ cutlet = ">=0.4.0, <0.5"
 unidic-lite = ">=1.0.8, <2"
 
 # extract text from video
-whisperx = { git = "https://github.com/mokurin000/whisperx.git" }
+whisperx = { git = "https://github.com/m-bain/whisperx.git" }
 # split vocal and instruments
 demucs = { git = "https://github.com/mokurin000/demucs.git" }
 # install main module
