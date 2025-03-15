@@ -126,7 +126,7 @@ def do_everything(
     shifts=5,
     whisper_model="large",
     whisper_download_root="models/ASR/whisper",
-    whisper_batch_size=32,
+    whisper_batch_size=4,
     whisper_diarization=True,
     whisper_min_speakers=None,
     whisper_max_speakers=None,

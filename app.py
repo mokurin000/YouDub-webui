@@ -179,7 +179,7 @@ whisper_inference = gr.Interface(
         ),
         gr.Textbox(label="Download Root", value="models/ASR/whisper"),
         gr.Radio(["auto", "cuda", "cpu"], label="Device", value="auto"),
-        gr.Slider(minimum=1, maximum=128, step=1, label="Batch Size", value=32),
+        gr.Slider(minimum=1, maximum=128, step=1, label="Batch Size", value=4),
         gr.Checkbox(label="Diarization", value=True),
         gr.Radio(
             [None, 1, 2, 3, 4, 5, 6, 7, 8, 9], label="Whisper Min Speakers", value=None
