@@ -53,7 +53,7 @@ def download_single_video(info, folder_path, resolution="1080p"):
             "download",
         ),
         "ignoreerrors": True,
-        'cookiefile': "cookies.txt"
+        "cookiefile": "cookies.txt",
     }
 
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
@@ -126,6 +126,6 @@ def download_from_url(url, folder_path, resolution="1080p", num_videos=5):
 
 if __name__ == "__main__":
     # Example usage
-    url = "https://www.bilibili.com/video/BV1J142117eJ/"
+    url = "https://www.bilibili.com/video/BV1c9fhY5EPk/"
     folder_path = "videos"
     download_from_url(url, folder_path)

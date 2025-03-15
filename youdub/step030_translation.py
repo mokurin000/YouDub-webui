@@ -2,12 +2,14 @@
 import json
 import os
 import re
-from openai import OpenAI
-from dotenv import load_dotenv
 import time
-from loguru import logger
 
-load_dotenv()
+from openai import OpenAI
+from loguru import logger
+from dotenv import load_dotenv
+
+load_dotenv(override=True)
+
 
 TARGET_LANG_NAME = os.environ["TARGET_LANG_NAME"]
 

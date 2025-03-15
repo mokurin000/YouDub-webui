@@ -150,5 +150,5 @@ def separate_all_audio_under_folder(
 
 
 if __name__ == "__main__":
-    folder = r"videos"
+    folder = "videos"
     separate_all_audio_under_folder(folder, shifts=0)
